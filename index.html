@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>swietne-alerty</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-900 p-12 flex justify-center items-top">
+
+    
+   <div class="-m-2 text-center" >
+      
+      		<h1 class="mb-12 bg-gray-200	p-4 rounded-full shadow">Podaj treść i rodzaj swojego alertu. Pamiętaj, że możesz w
+			jednym momencie zobaczyć maksymalnie 3 alerty! reszta zostanie dodana do kolejki. Każdy widoczny alert można anulować kliknięciem, lub czekając 10
+			sekund.</h1>
+		<form id="createAlertForm" name="createAlertForm"
+			class="inline-flex items-center justify-center space-y-10 flex-col">
+			<input
+          id="alert-message"
+          name="alert-message"
+          class="inline-flex"
+          type="text"
+          placeholder="Treść wiadomości"
+          required
+        />
+			<select name="alert-type" id="alert-select" required>
+          <option value="">Rodzaj alertu</option>
+          <option value="Error">Error</option>
+          <option value="Warning">Warning</option>
+          <option value="Success">Success</option>
+          <option value="Royal">Royal</option>
+        </select>
+			<button id="alertBtn" class="flex w-20 items-center justify-center rounded-md bg-purple-600" type="submit">Stwórz!</button>
+		</form>
+		</br></br>
+<div class="-m-2 text-center"id="alert-box">
+  </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+  </body>
+</html>

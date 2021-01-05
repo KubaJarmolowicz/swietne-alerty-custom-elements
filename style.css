@@ -1,0 +1,49 @@
+h1,
+h2 {
+  font-family: Lato;
+}
+
+@keyframes disappear {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-200px) scale(0);
+  }
+  to {
+    transform: translateX(0) scale(1);
+  }
+}
+
+.slideIn {
+  animation-name: slideIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.shrink {
+  animation-name: disappear;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+.pointer:hover {
+  cursor: pointer;
+}
+
+.inactive,
+.inactive:hover,
+.inactive:focus {
+  cursor: default;
+  background-color: gray;
+  color: #222;
+  opacity: 0.5;
+  border: none;
+  outline: none;
+}
